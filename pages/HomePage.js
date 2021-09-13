@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native';
 import Calender from '../components/Calender';
+import Plans from '../components/Plans';
+import Screen from '../components/Screen';
 
 const HomePage = ({ navigation }) => {
 	return (
-		<SafeAreaView>
+		<Screen>
 			<View style={styles.header}>
 				<View>
 					<Text>image</Text>
@@ -15,8 +17,9 @@ const HomePage = ({ navigation }) => {
 			</View>
 			<View style={styles.body}>
 				<Calender />
+				<Plans />
 			</View>
-		</SafeAreaView>
+		</Screen>
 	);
 };
 
@@ -28,6 +31,7 @@ const styles = StyleSheet.create({
 		paddingTop: 50,
 		justifyContent: 'space-between',
 		flexDirection: 'row',
+		width: '100%',
 	},
 	body: {
 		flex: 1,
